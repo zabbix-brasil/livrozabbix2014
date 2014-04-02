@@ -1,9 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
     <date>2014-04-02T02:30:48Z</date>
     <groups>
         <group>
+            <name>Serviços</name>
+        </group><group>
             <name>Ativos de Rede</name>
         </group>
         <group>
