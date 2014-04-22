@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2014-04-08T01:11:01Z</date>
+    <date>2014-04-16T13:09:18Z</date>
     <groups>
         <group>
             <name>100 - Linux</name>
@@ -41,14 +41,14 @@
             </applications>
             <items>
                 <item>
-                    <name>CPU - Média de carga - 5 minutos</name>
-                    <type>7</type>
+                    <name>Carga de CPU - Média de 1 minuto</name>
+                    <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>system.cpu.load[percpu,avg5]</key>
-                    <delay>300</delay>
-                    <history>90</history>
+                    <key>system.cpu.load[percpu,avg1]</key>
+                    <delay>20</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>0</value_type>
@@ -73,7 +73,7 @@
                     <publickey/>
                     <privatekey/>
                     <port/>
-                    <description/>
+                    <description>The processor load is calculated as system CPU load divided by number of CPU cores.</description>
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
@@ -83,14 +83,14 @@
                     <valuemap/>
                 </item>
                 <item>
-                    <name>CPU - Média de tempo ocioso - 5 minutos</name>
-                    <type>7</type>
+                    <name>Consumo espera por IO de disco</name>
+                    <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>system.cpu.util[,idle,avg5]</key>
-                    <delay>300</delay>
-                    <history>90</history>
+                    <key>system.cpu.util[,iowait]</key>
+                    <delay>20</delay>
+                    <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
                     <value_type>0</value_type>
@@ -115,7 +115,7 @@
                     <publickey/>
                     <privatekey/>
                     <port/>
-                    <description/>
+                    <description>Amount of time the CPU has been waiting for I/O to complete.</description>
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
@@ -125,13 +125,13 @@
                     <valuemap/>
                 </item>
                 <item>
-                    <name>CPU - Média de uso - 5 minutos</name>
-                    <type>15</type>
+                    <name>CPU - Média de tempo ocioso - 5 minutos</name>
+                    <type>7</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>cpu.uso</key>
-                    <delay>300</delay>
+                    <key>system.cpu.util[,idle,avg5]</key>
+                    <delay>30</delay>
                     <history>90</history>
                     <trends>365</trends>
                     <status>0</status>
@@ -148,7 +148,7 @@
                     <snmpv3_privpassphrase/>
                     <formula>1</formula>
                     <delay_flex/>
-                    <params>100-last(&quot;system.cpu.util[,idle,avg5]&quot;)</params>
+                    <params/>
                     <ipmi_sensor/>
                     <data_type>0</data_type>
                     <authtype>0</authtype>
@@ -539,174 +539,6 @@
                             </applications>
                             <valuemap/>
                         </item_prototype>
-                        <item_prototype>
-                            <name>{#IFNAME} - Baseline - 8hrs - Entrada</name>
-                            <type>15</type>
-                            <snmp_community/>
-                            <multiplier>0</multiplier>
-                            <snmp_oid/>
-                            <key>ifAVGInboundCalc.8h[{#IFNAME}]</key>
-                            <delay>28800</delay>
-                            <history>90</history>
-                            <trends>0</trends>
-                            <status>0</status>
-                            <value_type>0</value_type>
-                            <allowed_hosts/>
-                            <units>bps</units>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params>avg(&quot;ifInOctets[{#IFNAME}]&quot;,28800)</params>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>Baseline - Interfaces</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                        </item_prototype>
-                        <item_prototype>
-                            <name>{#IFNAME} - Baseline - 8hrs - Saída</name>
-                            <type>15</type>
-                            <snmp_community/>
-                            <multiplier>0</multiplier>
-                            <snmp_oid/>
-                            <key>ifAVGOutboundCalc.8h[{#IFNAME}]</key>
-                            <delay>28800</delay>
-                            <history>90</history>
-                            <trends>0</trends>
-                            <status>0</status>
-                            <value_type>0</value_type>
-                            <allowed_hosts/>
-                            <units>bps</units>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params>avg(&quot;ifOutOctets[{#IFNAME}]&quot;,28800)</params>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>Baseline - Interfaces</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                        </item_prototype>
-                        <item_prototype>
-                            <name>{#IFNAME} - Baseline - 24hrs - Entrada</name>
-                            <type>15</type>
-                            <snmp_community/>
-                            <multiplier>0</multiplier>
-                            <snmp_oid/>
-                            <key>ifAVGInboundCalc.day[{#IFNAME}]</key>
-                            <delay>86400</delay>
-                            <history>90</history>
-                            <trends>0</trends>
-                            <status>0</status>
-                            <value_type>0</value_type>
-                            <allowed_hosts/>
-                            <units>bps</units>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params>avg(&quot;ifAVGInboundCalc[{#IFNAME}]&quot;,86400)</params>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>Baseline - Interfaces</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                        </item_prototype>
-                        <item_prototype>
-                            <name>{#IFNAME} - Baseline - 24hrs - Saída</name>
-                            <type>15</type>
-                            <snmp_community/>
-                            <multiplier>0</multiplier>
-                            <snmp_oid/>
-                            <key>ifAVGOutboundCalc.day[{#IFNAME}]</key>
-                            <delay>86400</delay>
-                            <history>90</history>
-                            <trends>0</trends>
-                            <status>0</status>
-                            <value_type>0</value_type>
-                            <allowed_hosts/>
-                            <units>bps</units>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params>avg(&quot;ifAVGOutboundCalc[{#IFNAME}]&quot;,86400)</params>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>Baseline - Interfaces</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                        </item_prototype>
                     </item_prototypes>
                     <trigger_prototypes/>
                     <graph_prototypes/>
@@ -1002,11 +834,31 @@
     </templates>
     <triggers>
         <trigger>
-            <expression>{100_Linux:system.cpu.load[percpu,avg5].last()}&gt;80</expression>
-            <name>Uso de CPU acima de 80%</name>
+            <expression>{100_Linux:system.cpu.load[percpu,avg1].avg(2m)}&gt;30</expression>
+            <name>Carga de processamento muito alta em {HOST.NAME} - 2 minutos</name>
             <url/>
             <status>0</status>
             <priority>3</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{100_Linux:system.cpu.load[percpu,avg1].avg(5m)}&gt;30</expression>
+            <name>Carga de processamento muito alta em {HOST.NAME} - 5 minutos</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{100_Linux:system.cpu.util[,iowait].avg(5m)}&gt;20</expression>
+            <name>Consumo excessivo de I/O de disco em {HOST.NAME}</name>
+            <url/>
+            <status>0</status>
+            <priority>2</priority>
             <description/>
             <type>0</type>
             <dependencies/>

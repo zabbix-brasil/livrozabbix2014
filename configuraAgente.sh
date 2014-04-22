@@ -11,4 +11,5 @@ echo "DebugLevel=3" >> /usr/local/etc/zabbix_agentd.conf
 echo "PidFile=/tmp/zabbix_agentd.pid" >> /usr/local/etc/zabbix_agentd.conf
 echo "LogFile=/tmp/zabbix_agentd.log" >> /usr/local/etc/zabbix_agentd.conf
 echo "Timeout=3" >> /usr/local/etc/zabbix_agentd.conf
+echo "EnableRemoteCommands=1" >> /usr/local/etc/zabbix_agentd.conf
 
