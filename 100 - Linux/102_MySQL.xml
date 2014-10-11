@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2013-11-16T13:38:57Z</date>
+    <date>2014-10-11T04:57:50Z</date>
     <groups>
         <group>
             <name>100 - Linux</name>
@@ -10,7 +10,8 @@
     <templates>
         <template>
             <template>102_MySQL</template>
-            <name>102 - MySQL</name>
+            <name>102 - MySQL - Processo e performance</name>
+            <description/>
             <groups>
                 <group>
                     <name>100 - Linux</name>
@@ -18,10 +19,102 @@
             </groups>
             <applications>
                 <application>
+                    <name>Inventário</name>
+                </application>
+                <application>
                     <name>MySQL</name>
+                </application>
+                <application>
+                    <name>MySQL - Avançado</name>
                 </application>
             </applications>
             <items>
+                <item>
+                    <name>MySQL - Processos</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>proc.num[mysqld]</key>
+                    <delay>300</delay>
+                    <history>7</history>
+                    <trends>30</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>MySQL</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>MySQL - Uso de memória</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>proc.mem[mysqld]</key>
+                    <delay>300</delay>
+                    <history>7</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>MySQL</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
                 <item>
                     <name>MySQL Admin version</name>
                     <type>0</type>
@@ -59,10 +152,11 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>MySQL</name>
+                            <name>MySQL - Avançado</name>
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
                 </item>
                 <item>
                     <name>MySQL begin operations per second</name>
@@ -101,10 +195,11 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>MySQL</name>
+                            <name>MySQL - Avançado</name>
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
                 </item>
                 <item>
                     <name>MySQL bytes received per second</name>
@@ -146,10 +241,11 @@ userparameter_mysql.conf.</description>
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>MySQL</name>
+                            <name>MySQL - Avançado</name>
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
                 </item>
                 <item>
                     <name>MySQL bytes sent per second</name>
@@ -190,10 +286,11 @@ It requires user parameter mysql.status[*], which is defined in userparameter_my
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>MySQL</name>
+                            <name>MySQL - Avançado</name>
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
                 </item>
                 <item>
                     <name>MySQL commit operations per second</name>
@@ -232,10 +329,11 @@ It requires user parameter mysql.status[*], which is defined in userparameter_my
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>MySQL</name>
+                            <name>MySQL - Avançado</name>
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
                 </item>
                 <item>
                     <name>MySQL delete operations per second</name>
@@ -274,10 +372,11 @@ It requires user parameter mysql.status[*], which is defined in userparameter_my
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>MySQL</name>
+                            <name>MySQL - Avançado</name>
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
                 </item>
                 <item>
                     <name>MySQL insert operations per second</name>
@@ -316,10 +415,11 @@ It requires user parameter mysql.status[*], which is defined in userparameter_my
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>MySQL</name>
+                            <name>MySQL - Avançado</name>
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
                 </item>
                 <item>
                     <name>MySQL queries per second</name>
@@ -358,10 +458,11 @@ It requires user parameter mysql.status[*], which is defined in userparameter_my
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>MySQL</name>
+                            <name>MySQL - Avançado</name>
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
                 </item>
                 <item>
                     <name>MySQL rollback operations per second</name>
@@ -400,10 +501,11 @@ It requires user parameter mysql.status[*], which is defined in userparameter_my
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>MySQL</name>
+                            <name>MySQL - Avançado</name>
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
                 </item>
                 <item>
                     <name>MySQL select operations per second</name>
@@ -442,10 +544,11 @@ It requires user parameter mysql.status[*], which is defined in userparameter_my
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>MySQL</name>
+                            <name>MySQL - Avançado</name>
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
                 </item>
                 <item>
                     <name>MySQL slow queries</name>
@@ -484,10 +587,11 @@ It requires user parameter mysql.status[*], which is defined in userparameter_my
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>MySQL</name>
+                            <name>MySQL - Avançado</name>
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
                 </item>
                 <item>
                     <name>MySQL status</name>
@@ -529,12 +633,13 @@ It requires user parameter mysql.status[*], which is defined in userparameter_my
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>MySQL</name>
+                            <name>MySQL - Avançado</name>
                         </application>
                     </applications>
                     <valuemap>
                         <name>Service state</name>
                     </valuemap>
+                    <logtimefmt/>
                 </item>
                 <item>
                     <name>MySQL update operations per second</name>
@@ -573,10 +678,11 @@ It requires user parameter mysql.status[*], which is defined in userparameter_my
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>MySQL</name>
+                            <name>MySQL - Avançado</name>
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
                 </item>
                 <item>
                     <name>MySQL uptime</name>
@@ -615,10 +721,11 @@ It requires user parameter mysql.status[*], which is defined in userparameter_my
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>MySQL</name>
+                            <name>MySQL - Avançado</name>
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
                 </item>
                 <item>
                     <name>MySQL version</name>
@@ -657,10 +764,11 @@ It requires user parameter mysql.status[*], which is defined in userparameter_my
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>MySQL</name>
+                            <name>MySQL - Avançado</name>
                         </application>
                     </applications>
                     <valuemap/>
+                    <logtimefmt/>
                 </item>
             </items>
             <discovery_rules/>
@@ -700,6 +808,7 @@ It requires user parameter mysql.status[*], which is defined in userparameter_my
                                 <name>MySQL operations</name>
                                 <host>102_MySQL</host>
                             </resource>
+                            <max_columns>3</max_columns>
                             <application/>
                         </screen_item>
                         <screen_item>
@@ -721,6 +830,7 @@ It requires user parameter mysql.status[*], which is defined in userparameter_my
                                 <name>MySQL bandwidth</name>
                                 <host>102_MySQL</host>
                             </resource>
+                            <max_columns>3</max_columns>
                             <application/>
                         </screen_item>
                     </screen_items>
@@ -728,7 +838,51 @@ It requires user parameter mysql.status[*], which is defined in userparameter_my
             </screens>
         </template>
     </templates>
+    <triggers>
+        <trigger>
+            <expression>{102_MySQL:proc.mem[mysqld].last()}=0</expression>
+            <name>Nenhum processo do MySQL em execução</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+    </triggers>
     <graphs>
+        <graph>
+            <name>MySQL - Uso de memória</name>
+            <width>900</width>
+            <height>200</height>
+            <yaxismin>0.0000</yaxismin>
+            <yaxismax>100.0000</yaxismax>
+            <show_work_period>1</show_work_period>
+            <show_triggers>1</show_triggers>
+            <type>0</type>
+            <show_legend>1</show_legend>
+            <show_3d>0</show_3d>
+            <percent_left>0.0000</percent_left>
+            <percent_right>0.0000</percent_right>
+            <ymin_type_1>0</ymin_type_1>
+            <ymax_type_1>0</ymax_type_1>
+            <ymin_item_1>0</ymin_item_1>
+            <ymax_item_1>0</ymax_item_1>
+            <graph_items>
+                <graph_item>
+                    <sortorder>0</sortorder>
+                    <drawtype>5</drawtype>
+                    <color>00C800</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>102_MySQL</host>
+                        <key>proc.mem[mysqld]</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
         <graph>
             <name>MySQL bandwidth</name>
             <width>900</width>
