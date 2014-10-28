@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>2.0</version>
+    <date>2014-10-28T07:34:16Z</date>
+    <groups>
+        <group>
+            <name>400 - Web</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>401_Internet</template>
+            <name>401 - Template para monitorar a internet</name>
+            <description/>
+            <groups>
+                <group>
+                    <name>400 - Web</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Internet</name>
+                </application>
+            </applications>
+            <items/>
+            <discovery_rules/>
+            <macros/>
+            <templates/>
+            <screens/>
+        </template>
+    </templates>
+</zabbix_export>
