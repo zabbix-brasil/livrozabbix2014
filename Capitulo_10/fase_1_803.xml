@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>2.0</version>
+    <date>2014-11-06T07:33:54Z</date>
+    <groups>
+        <group>
+            <name>800 - Multi OS</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>803_Zabbix_Trapper</template>
+            <name>803_Zabbix_Trapper</name>
+            <description/>
+            <groups>
+                <group>
+                    <name>800 - Multi OS</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Trapper Zabbix</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>Trap texto</name>
+                    <type>2</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>zabbix.trapper.teste1</key>
+                    <delay>0</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>4</value_type>
+                    <allowed_hosts>127.0.0.1</allowed_hosts>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>Trapper Zabbix</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+            </items>
+            <discovery_rules/>
+            <macros/>
+            <templates/>
+            <screens/>
+        </template>
+    </templates>
+</zabbix_export>
