@@ -1,0 +1,9 @@
+NOTIFICATION-TEST-MIB DEFINITIONS ::= BEGIN
+	IMPORTS ucdavis FROM UCD-SNMP-MIB;
+demonotifs OBJECT IDENTIFIER ::= { ucdavis 991 }
+demo-notif NOTIFICATION-TYPE
+	STATUS current
+	OBJECTS { sysLocation }
+	DESCRIPTION "Just a test notification"
+	::= { demonotifs 17 }
+END
