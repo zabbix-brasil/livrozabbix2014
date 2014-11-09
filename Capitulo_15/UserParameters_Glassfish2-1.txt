@@ -1,0 +1,19 @@
+#----------#
+# Glassfish 2.1
+#----------#
+UserParameter=bytesreceived,sudo asadmin get -m --iterations 1 --interval 1 server.http-service.server.http-listener-1.bytesreceived-count | cut -d"=" -f2 |sed 's/^ \+//' | sed 's/[ ]\+/ /g' | sed ':a;$!N;s/\n//;ta;'
+UserParameter=bytessent,sudo asadmin get -m --iterations 1 --interval 1 server.http-service.server.http-listener-1.bytessent-count | cut -d"=" -f2 |sed 's/^ \+//' | sed 's/[ ]\+/ /g' | sed ':a;$!N;s/\n//;ta;'
+UserParameter=count200,sudo asadmin get -m --iterations 1 --interval 1 server.http-service.server.http-listener-1.count200-count | cut -d"=" -f2 |sed 's/^ \+//' | sed 's/[ ]\+/ /g' | sed ':a;$!N;s/\n//;ta;'
+UserParameter=count2xx,sudo asadmin get -m --iterations 1 --interval 1 server.http-service.server.http-listener-1.count2xx-count | cut -d"=" -f2 |sed 's/^ \+//' | sed 's/[ ]\+/ /g' | sed ':a;$!N;s/\n//;ta;'
+UserParameter=count302,sudo asadmin get -m --iterations 1 --interval 1 server.http-service.server.http-listener-1.count302-count | cut -d"=" -f2 |sed 's/^ \+//' | sed 's/[ ]\+/ /g' | sed ':a;$!N;s/\n//;ta;'
+UserParameter=count304,sudo asadmin get -m --iterations 1 --interval 1 server.http-service.server.http-listener-1.count304-count | cut -d"=" -f2 |sed 's/^ \+//' | sed 's/[ ]\+/ /g' | sed ':a;$!N;s/\n//;ta;'
+UserParameter=count3xx,sudo asadmin get -m --iterations 1 --interval 1 server.http-service.server.http-listener-1.count3xx-count | cut -d"=" -f2 |sed 's/^ \+//' | sed 's/[ ]\+/ /g' | sed ':a;$!N;s/\n//;ta;'
+UserParameter=count400,sudo asadmin get -m --iterations 1 --interval 1 server.http-service.server.http-listener-1.count400-count | cut -d"=" -f2 |sed 's/^ \+//' | sed 's/[ ]\+/ /g' | sed ':a;$!N;s/\n//;ta;'
+UserParameter=count401,sudo asadmin get -m --iterations 1 --interval 1 server.http-service.server.http-listener-1.count401-count | cut -d"=" -f2 |sed 's/^ \+//' | sed 's/[ ]\+/ /g' | sed ':a;$!N;s/\n//;ta;'
+UserParameter=count403,sudo asadmin get -m --iterations 1 --interval 1 server.http-service.server.http-listener-1.count403-count | cut -d"=" -f2 |sed 's/^ \+//' | sed 's/[ ]\+/ /g' | sed ':a;$!N;s/\n//;ta;'
+UserParameter=count404,sudo asadmin get -m --iterations 1 --interval 1 server.http-service.server.http-listener-1.count404-count | cut -d"=" -f2 |sed 's/^ \+//' | sed 's/[ ]\+/ /g' | sed ':a;$!N;s/\n//;ta;'
+UserParameter=count4xx,sudo asadmin get -m --iterations 1 --interval 1 server.http-service.server.http-listener-1.count4xx-count | cut -d"=" -f2 |sed 's/^ \+//' | sed 's/[ ]\+/ /g' | sed ':a;$!N;s/\n//;ta;'
+UserParameter=count503,sudo asadmin get -m --iterations 1 --interval 1 server.http-service.server.http-listener-1.count503-count | cut -d"=" -f2 |sed 's/^ \+//' | sed 's/[ ]\+/ /g' | sed ':a;$!N;s/\n//;ta;'
+UserParameter=count5xx,sudo asadmin get -m --iterations 1 --interval 1 server.http-service.server.http-listener-1.count5xx-count | cut -d"=" -f2 |sed 's/^ \+//' | sed 's/[ ]\+/ /g' | sed ':a;$!N;s/\n//;ta;'
+UserParameter=countopenconnections,sudo asadmin get -m --iterations 1 --interval 1 server.http-service.server.http-listener-1.countopenconnections-count | cut -d"=" -f2 |sed 's/^ \+//' | sed 's/[ ]\+/ /g' | sed ':a;$!N;s/\n//;ta;'
+UserParameter=currentthreadcount,sudo asadmin get -m --iterations 1 --interval 1 server.http-service.server.http-listener-1.countopenconnections-count | cut -d"=" -f2 |sed 's/^ \+//' | sed 's/[ ]\+/ /g' | sed ':a;$!N;s/\n//;ta;'
