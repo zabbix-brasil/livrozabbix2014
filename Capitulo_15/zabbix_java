@@ -1,6 +1,20 @@
-#!/bin/sh
+#!/bin/bash
+#
+#       /etc/rc.d/init.d/zabbix_proxy
+#
+# Starts the zabbix_proxy daemon
+#
+# chkconfig: - 95 5
+# description: Zabbix Java Gateway
+# processname: zabbix_java
+# pidfile: /tmp/zabbix_java.pid
 
-NAME=zabbix-java
+# Modified for Zabbix 2.0.0
+# May 2012, Zabbix SIA
+
+# Source function library.
+
+NAME=zabbix_java
 PATH=/bin:/usr/bin:/sbin:/usr/sbin:/home/zabbix/bin
 DAEMON=/usr/local/sbin/zabbix_java/startup.sh
 DOWN=/usr/local/sbin/zabbix_java/shutdown.sh
