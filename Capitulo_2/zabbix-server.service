@@ -1,0 +1,12 @@
+[Unit]
+Description=Zabbix Server
+After=syslog.target network.target mysqld.service
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/zabbix_server -c /usr/local/etc/zabbix_server.conf
+ExecReload=/usr/local/sbin/zabbix_server -R config_cache_reload
+RemainAfterExit=yes
+PIDFile=/tmp/zabbix_server.pid
+[Install]
+WantedBy=multi-user.target
+
