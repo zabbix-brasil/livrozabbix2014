@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>2.0</version>
+    <date>2014-11-18T08:01:04Z</date>
+    <groups>
+        <group>
+            <name>200 - Windows</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>201_Windows_Especial</template>
+            <name>201 - Servidor Windows Especial</name>
+            <description/>
+            <groups>
+                <group>
+                    <name>200 - Windows</name>
+                </group>
+            </groups>
+            <applications/>
+            <items/>
+            <discovery_rules/>
+            <macros/>
+            <templates/>
+            <screens/>
+        </template>
+    </templates>
+</zabbix_export>
