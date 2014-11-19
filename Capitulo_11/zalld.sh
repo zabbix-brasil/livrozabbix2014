@@ -28,10 +28,12 @@ usage() {
 OPCAO=$1;
 case $OPCAO in
 'LLD')
-    curl "$CAMINHO_FRONTEND/lldBasesMySQL.php?p_acao=LLD" 2>/dev/null;
+#    curl "$CAMINHO_FRONTEND/lldBasesMySQL.php?p_acao=LLD" 2>/dev/null;
+     curl "$CAMINHO_FRONTEND/lldBasesMySQL.php?p_acao=LLD" ;
 ;;
 'count')
-    curl "$CAMINHO_FRONTEND/lldBasesMySQL.php?p_acao=count&p_tabela=$2" 2>/dev/null ;
+    curl "$CAMINHO_FRONTEND/lldBasesMySQL.php?p_acao=count&p_tabela=$2"  ;
+#    curl "$CAMINHO_FRONTEND/lldBasesMySQL.php?p_acao=count&p_tabela=$2" 2>/dev/null ;
 ;;
 'version')
     echo $zaver;
