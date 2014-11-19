@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2014-11-19T12:30:12Z</date>
+    <date>2014-11-06T09:57:07Z</date>
     <groups>
         <group>
             <name>800 - Multi OS</name>
@@ -205,16 +205,4 @@
             <screens/>
         </template>
     </templates>
-    <triggers>
-        <trigger>
-            <expression>{803_Zabbix_Trapper:backup.inicio.nodata(600)}=1</expression>
-            <name>Backup não inicia a mais de 10 minutos</name>
-            <url/>
-            <status>0</status>
-            <priority>1</priority>
-            <description/>
-            <type>0</type>
-            <dependencies/>
-        </trigger>
-    </triggers>
 </zabbix_export>
