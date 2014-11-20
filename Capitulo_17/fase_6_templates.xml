@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2014-11-18T11:19:17Z</date>
+    <date>2014-11-20T13:03:48Z</date>
     <groups>
         <group>
             <name>200 - Windows</name>
@@ -521,6 +521,36 @@
         <trigger>
             <expression>{201_Windows_Especial:aplicacao.livro.last()}&gt;0</expression>
             <name>Aplicação Livro</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{201_Windows_Especial:service_state[W32Time].last()}&gt;0</expression>
+            <name>Serviço de Hora do Windows</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{201_Windows_Especial:service_state[Spooler].last()}&gt;0</expression>
+            <name>Serviço de Impressão do Windows</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{201_Windows_Especial:service_state[AudioSrv].last()}&gt;0</expression>
+            <name>Serviço de Áudio do Windows</name>
             <url/>
             <status>0</status>
             <priority>4</priority>
