@@ -17,8 +17,8 @@ else
 fi
 
 # Este script foi feito para zabbix 2.*
-SOURCE_DIR="/install/zabbix-2.*";
-cd $SOURCE_DIR
+#SOURCE_DIR="/install/zabbix-2.*";
+#cd /install
 
 case $OS in
    Debian)
