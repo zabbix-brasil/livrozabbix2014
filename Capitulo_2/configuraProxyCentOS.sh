@@ -1,6 +1,6 @@
 
 # Este capítulo utiliza como ambiente o zabbix 2.2.3
-SOURCE_DIR="/install/zabbix-2.2.3";
+SOURCE_DIR="/install/zabbix-2*";
 cd $SOURCE_DIR
 
 cp $SOURCE_DIR/misc/init.d/fedora/core5/zabbix-server /etc/init.d/zabbix-proxy
