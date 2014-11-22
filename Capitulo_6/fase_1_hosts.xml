@@ -1135,6 +1135,9 @@
                 <group>
                     <name>Servidores Windows</name>
                 </group>
+                <group>
+                    <name>Servidores Linux</name>
+                </group>
             </groups>
             <interfaces>
                 <interface>
@@ -1244,6 +1247,9 @@
             <groups>
                 <group>
                     <name>Servidores Windows</name>
+                </group>
+                <group>
+                    <name>Servidores Linux</name>
                 </group>
             </groups>
             <interfaces>
@@ -1355,6 +1361,9 @@
                 <group>
                     <name>Servidores Windows</name>
                 </group>
+                <group>
+                    <name>Servidores Linux</name>
+                </group>
             </groups>
             <interfaces>
                 <interface>
@@ -1465,6 +1474,9 @@
                 <group>
                     <name>Servidores Windows</name>
                 </group>
+                <group>
+                    <name>Servidores Linux</name>
+                </group>
             </groups>
             <interfaces>
                 <interface>
@@ -1574,6 +1586,9 @@
             <groups>
                 <group>
                     <name>Servidores Windows</name>
+                </group>
+                <group>
+                    <name>Servidores Linux</name>
                 </group>
             </groups>
             <interfaces>
