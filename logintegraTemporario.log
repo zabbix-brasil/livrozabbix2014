@@ -1,0 +1,12 @@
+Sat Nov 22 07:34:21 BRST 2014;luke.skywalker Ação - Notifica Incidente Trigger: Uso de CPU (1m) acima de 80%
+Trigger status: PROBLEM
+Trigger severity: Average
+Trigger URL: 
+
+Item values:
+
+1. CPU - Média de carga - 1 minuto (Linux_1:system.cpu.load[percpu,avg1]): 30.45
+2. *UNKNOWN* (*UNKNOWN*:*UNKNOWN*): *UNKNOWN*
+3. *UNKNOWN* (*UNKNOWN*:*UNKNOWN*): *UNKNOWN*
+
+Original event ID: 26666;
