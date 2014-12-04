@@ -1,5 +1,6 @@
+#!/bin/bash
 
-# Este capítulo utiliza como ambiente o zabbix 2.2.3
+# Este capítulo utiliza como ambiente o zabbix 2.*
 SOURCE_DIR="/install/zabbix-2*";
 cd $SOURCE_DIR
 

@@ -1,3 +1,4 @@
+#!/bin/bash
 
 # Este capítulo utiliza como ambiente o zabbix 2.*
 SOURCE_DIR="/install/zabbix-2*";

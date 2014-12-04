@@ -1,3 +1,6 @@
+#!/bin/bash
+# Autor: Adail Horst
+
 ARCH=$(uname -m | sed 's/x86_//;s/i[3-6]86/32/')
 
 if [ -f /etc/debian_version ]; then
