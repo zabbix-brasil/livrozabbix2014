@@ -4,6 +4,8 @@
 # date:         20-nov-2014
 # revision:     Aecio Pires <aecio@dynavideo.com.br>
 # Last updated: 21-jan-2015, 18:08
+# revision: 	Andre Deo <andredeo@gmail.com>
+# Last updated: 27-jan-2015, 23:13
 #-------------------------------------------------------
 
 CMDLINE=$0
@@ -39,10 +41,18 @@ cd $SOURCE_DIR
 
 # Para ambientes de produção modificar aqui... as senhas aqui são propositalmente fracas
 SENHA="creative2014";
-#SENHAROOT="$SENHA_root";
 SENHAROOT="creative2014_root";
 NOMEBANCO="zbx_db";
 USUARIODB="zbx_db";
+
+# Iniciando o MySQL
+LINUXDISTRO=$(get_linux_distro)
+
+case "$LINUXDISTRO" in
+        CENTOS|REDHAT)
+		service mysqld start
+        ;;
+esac
 
 # Redefinir a senha do root
 LINUXDISTRO=$(get_linux_distro)
@@ -50,7 +60,7 @@ LINUXDISTRO=$(get_linux_distro)
 case "$LINUXDISTRO" in
         CENTOS|REDHAT)
 		MYADMIN=$(which mysqladmin)
-		$MYADMIN -u root $SENHAROOT
+		$MYADMIN -u root password $SENHAROOT
         ;;
 esac
 
