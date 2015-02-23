@@ -4,6 +4,8 @@
 # date:         20-nov-2014
 # revision:     Aecio Pires <aecio@dynavideo.com.br>
 # Last updated: 21-jan-2015, 18:08
+# revision:     Andre Deo <andredeo@gmail.com>
+# Last updated: 27-jan-2015, 23:20
 #-------------------------------------------------------
 
 CMDLINE=$0
@@ -33,5 +35,5 @@ sqlite3 /var/lib/sqlite/zabbix.db < images.sql;
 sqlite3 /var/lib/sqlite/zabbix.db < data.sql;
 
 # Configurando a permissao do arquivo
-useradd zabbix
+useradd zabbix -s /sbin/nologin
 chown -R zabbix:zabbix /var/lib/sqlite/
