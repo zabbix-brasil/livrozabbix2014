@@ -5,6 +5,8 @@
 # date:         20-nov-2014
 # revision:     Aecio Pires <aecio@dynavideo.com.br>
 # Last updated: 21-jan-2015, 18:08
+# revision:     Andre Deo <andredeo@gmail.com>
+# Last updated: 27-jan-2015, 23:23
 #-------------------------------------------------------
 
 CMDLINE=$0
@@ -21,7 +23,7 @@ fi
 SOURCE_DIR="/install/zabbix-2*";
 cd $SOURCE_DIR
 
-cp $SOURCE_DIR/misc/init.d/fedora/core5/zabbix-server /etc/init.d/zabbix-proxy
-sed -i 's/server/proxy/g' /etc/init.d/zabbix-proxy
+cp $SOURCE_DIR/misc/init.d/fedora/core5/zabbix_server /etc/init.d/zabbix_proxy
+sed -i 's/server/proxy/g' /etc/init.d/zabbix_proxy
 chkconfig --add zabbix_proxy
 chkconfig --level 35 zabbix_proxy on
