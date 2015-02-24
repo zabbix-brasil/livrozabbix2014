@@ -4,6 +4,8 @@
 # date:         20-nov-2014
 # revision:     Aecio Pires <aecio@dynavideo.com.br>
 # Last updated: 21-jan-2015, 18:08
+# revision:     Andre Deo <andredeo@gmail.com>
+# Last updated: 27-jan-2015, 23:37
 #-------------------------------------------------------
 
 CMDLINE=$0
@@ -19,11 +21,10 @@ fi
 
 # Para ambientes de produção modificar aqui... as senhas aqui são propositalme fracas
 # Caso voce tenha modificado as senhas, pode ajustar as variaveia abaixo
-#SENHA="creative2014";
-#SENHAROOT="$SENHA_root";
-#SENHAROOT="creative2014_root";
-#NOMEBANCO="zbx_db";
-#USUARIODB="zbx_db";
+SENHA="creative2014";
+SENHAROOT="creative2014_root";
+NOMEBANCO="zbx_db";
+USUARIODB="zbx_db";
 
 mv /usr/local/etc/zabbix_server.conf /usr/local/etc/zabbix_server.conf.ori
 echo "DBUser=$USUARIODB" > /usr/local/etc/zabbix_server.conf
