@@ -18,6 +18,9 @@
         <group>
             <name>Servidores Windows</name>
         </group>
+        <group>
+            <name>Serviços</name>
+        </group>
     </groups>
     <hosts>
         <host>
