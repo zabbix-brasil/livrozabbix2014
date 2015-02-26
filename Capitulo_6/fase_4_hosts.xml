@@ -573,7 +573,7 @@
             <ipmi_password/>
             <templates>
                 <template>
-                    <name>001_Zabbix_Server</name>
+                    <name>Template App Zabbix Server</name>
                 </template>
                 <template>
                     <name>100_Linux</name>
