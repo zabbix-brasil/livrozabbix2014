@@ -17,7 +17,7 @@ usage() {
     echo "zalld version: $zaver $#"
     echo "Parametros:";
     echo "    LLD -- Retorna a lista de tabelas.";
-    echo "    count,<TABELA> -- retorna a quantidade de linhas de uma tabela.";
+    echo "    count <TABELA> -- retorna a quantidade de linhas de uma tabela.";
     echo "    version -- retorna a versao do script";
 }
 
