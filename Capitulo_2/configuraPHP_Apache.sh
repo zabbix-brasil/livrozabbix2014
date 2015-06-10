@@ -46,7 +46,7 @@ case "$LINUXDISTRO" in
         ;;
 esac
 
-cp $PHPFILE $PHPFILE.ori;
+cp $PHPFILE $PHPFILE.ori.$$
 sed -i 's/max_execution_time/\;max_execution_time/g' $PHPFILE;
 echo ' max_execution_time=300'>> $PHPFILE;
 sed -i 's/max_input_time/\;max_input_time/g' $PHPFILE;
@@ -66,3 +66,5 @@ case "$LINUXDISTRO" in
 		service apache2 restart
         ;;
 esac
+
+echo "O PHP foi configurado no arquivo $PHPFILE"

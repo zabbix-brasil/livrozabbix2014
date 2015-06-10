@@ -16,7 +16,7 @@ if [ ! "$MYUID" -eq 0 ] ; then
         exit 1
 fi
 
-# Este capítulo utiliza como ambiente o zabbix 2.*
+# Este capitulo utiliza como ambiente o zabbix 2.*
 SOURCE_DIR="/install/zabbix-2*";
 cd $SOURCE_DIR
 

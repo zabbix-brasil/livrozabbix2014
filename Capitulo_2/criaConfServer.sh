@@ -6,6 +6,8 @@
 # Last updated: 21-jan-2015, 18:08
 # revision:     Andre Deo <andredeo@gmail.com>
 # Last updated: 27-jan-2015, 23:37
+# revision:     Aecio Pires <aecio@dynavideo.com.br>
+# Last updated: 24-fev-2015, 10:00
 #-------------------------------------------------------
 
 CMDLINE=$0
@@ -18,24 +20,26 @@ if [ ! "$MYUID" -eq 0 ] ; then
         exit 1
 fi
 
-
-# Para ambientes de produção modificar aqui... as senhas aqui são propositalme fracas
-# Caso voce tenha modificado as senhas, pode ajustar as variaveia abaixo
+CONF_SERVER=/usr/local/etc/zabbix_server.conf
+# Para ambientes de producao modificar aqui... as senhas aqui sao propositalmente fracas
+# Caso voce tenha modificado as senhas, pode ajustar as variaveis abaixo
 SENHA="creative2014";
 SENHAROOT="creative2014_root";
 NOMEBANCO="zbx_db";
 USUARIODB="zbx_db";
 
-mv /usr/local/etc/zabbix_server.conf /usr/local/etc/zabbix_server.conf.ori
-echo "DBUser=$USUARIODB" > /usr/local/etc/zabbix_server.conf
-echo "DBPassword=$SENHA" >> /usr/local/etc/zabbix_server.conf
-echo "DBName=$NOMEBANCO" >> /usr/local/etc/zabbix_server.conf
-echo "CacheSize=32M" >> /usr/local/etc/zabbix_server.conf
+mv $CONF_SERVER $CONF_SERVER.ori.$$
+echo "DBUser=$USUARIODB" > $CONF_SERVER
+echo "DBPassword=$SENHA" >> $CONF_SERVER
+echo "DBName=$NOMEBANCO" >> $CONF_SERVER
+echo "CacheSize=32M" >> $CONF_SERVER
 
-echo "DebugLevel=3" >> /usr/local/etc/zabbix_server.conf
-echo "PidFile=/tmp/zabbix_server.pid" >> /usr/local/etc/zabbix_server.conf
-echo "LogFile=/tmp/zabbix_server.log" >> /usr/local/etc/zabbix_server.conf
-echo "Timeout=3" >> /usr/local/etc/zabbix_server.conf
+echo "DebugLevel=3" >> $CONF_SERVER
+echo "PidFile=/tmp/zabbix_server.pid" >> $CONF_SERVER
+echo "LogFile=/tmp/zabbix_server.log" >> $CONF_SERVER
+echo "Timeout=3" >> $CONF_SERVER
 
 PATH_FPING=$(which fping);
-echo "FpingLocation=$PATH_FPING" >> /usr/local/etc/zabbix_server.conf
+echo "FpingLocation=$PATH_FPING" >> $CONF_SERVER
+
+echo "O arquivo de configuracao do Zabbix Server esta em $CONF_SERVER"

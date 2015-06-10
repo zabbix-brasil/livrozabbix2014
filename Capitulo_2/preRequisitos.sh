@@ -3,7 +3,7 @@
 # author:       Adail Spinola <the.spaww@gmail.com>, Aecio Pires <aeciopires@gmail.com> e Andre Deo <andredeo@gmail.com>
 # date:         20-nov-2014
 # revision:     Aecio Pires <aecio@dynavideo.com.br>
-# Last updated: 21-jan-2015, 18:08
+# Last updated: 24-fev-2015, 10:00
 #-------------------------------------------------------
 
 CMDLINE=$0
@@ -40,6 +40,7 @@ fi
 
 case $OS in
    Debian)
+apt-get update
 apt-get -y install wget;
 apt-get -y install build-essential snmp libiksemel-dev vim libssh2-1-dev libssh2-1 libopenipmi-dev libsnmp-dev wget libcurl4-gnutls-dev fping libxml2 libxml2-dev curl libcurl3-gnutls libcurl3-gnutls-dev sudo;
 apt-get -y install libiksemel-dev libiksemel-utils  libiksemel3;
@@ -49,7 +50,7 @@ apt-get install -y --force-yes sqlite3 libsqlite3-dev php5-sqlite;
 ;;
   CentOS)
      yum -y install wget
-     wget http://epel.gtdinternet.com/6/i386/epel-release-6-8.noarch.rpm
+     wget  --no-check-certificate https://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
      rpm -ivh epel-release-6-*.rpm  
      yum -y update
      yum -y groupinstall 'Development Tools'; 

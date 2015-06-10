@@ -36,24 +36,29 @@ echo $LINUXDISTRO
 }
 
 LINUXDISTRO=$(get_linux_distro)
-# Este capítulo utiliza como ambiente o zabbix 2.*
+# Este capitulo utiliza como ambiente o zabbix 2.*
 SOURCE_DIR="/install/zabbix-2*";
 
 case "$LINUXDISTRO" in
         DEBIAN)
-		mkdir -p /var/www/livro
-		cp -r $SOURCE_DIR/frontends/php/* /var/www/livro
+        	ZABBIX_WEB_DIR=/var/www/livro
+		mkdir -p $ZABBIX_WEB_DIR > /dev/null 2>&1
+		cp -r $SOURCE_DIR/frontends/php/* $ZABBIX_WEB_DIR
 		chown -R www-data:www-data /var/www/
 	;;
 	UBUNTU)
-		mkdir -p /var/www/html/livro
-		cp -r $SOURCE_DIR/frontends/php/* /var/www/html/livro
+		ZABBIX_WEB_DIR=/var/www/html/livro
+		mkdir -p $ZABBIX_WEB_DIR > /dev/null 2>&1
+		cp -r $SOURCE_DIR/frontends/php/* $ZABBIX_WEB_DIR
 		chown -R www-data:www-data /var/www/
         ;;
 	CENTOS|REDHAT)
-		mkdir -p /var/www/html/livro
-		cp -r $SOURCE_DIR/frontends/php/* /var/www/html/livro
+		ZABBIX_WEB_DIR=/var/www/html/livro
+		mkdir -p $ZABBIX_WEB_DIR > /dev/null 2>&1
+		cp -r $SOURCE_DIR/frontends/php/* $ZABBIX_WEB_DIR
 		chown -R apache:apache /var/www/html/livro
         ;;
 esac
+
+echo "A interface web do Zabbix foi instalada em $ZABBIX_WEB_DIR"
 

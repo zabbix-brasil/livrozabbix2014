@@ -3,7 +3,7 @@
 # author:       Adail Spinola <the.spaww@gmail.com>, Aecio Pires <aeciopires@gmail.com> e Andre Deo <andredeo@gmail.com>
 # date:         20-nov-2014
 # revision:     Aecio Pires <aecio@dynavideo.com.br>
-# Last updated: 21-jan-2015, 18:08
+# Last updated: 24-fev-2015, 10:00
 #-------------------------------------------------------
 
 CMDLINE=$0
@@ -17,18 +17,21 @@ if [ ! "$MYUID" -eq 0 ] ; then
 fi
 
 SOURCE_DIR="/install/zabbix-2.*/";
+CONF_AGENTE=/usr/local/etc/zabbix_agentd.conf
 
 # Backup do arquivo original do agente, importante guarda-lo para referencias
-mv /usr/local/etc/zabbix_agentd.conf /usr/local/etc/zabbix_agentd.conf.ori
+mv $CONF_AGENTE $CONF_AGENTE.ori.$$
 
 # Criando um arquivo de configuração do agente minimizado
 cd $SOURCE_DIR
-echo "Server=127.0.0.1" > /usr/local/etc/zabbix_agentd.conf
-echo "StartAgents=3" >> /usr/local/etc/zabbix_agentd.conf
-echo "DebugLevel=3" >> /usr/local/etc/zabbix_agentd.conf
-echo "Hostname=$(hostname)" >> /usr/local/etc/zabbix_agentd.conf
-echo "PidFile=/tmp/zabbix_agentd.pid" >> /usr/local/etc/zabbix_agentd.conf
-echo "LogFile=/tmp/zabbix_agentd.log" >> /usr/local/etc/zabbix_agentd.conf
-echo "Timeout=3" >> /usr/local/etc/zabbix_agentd.conf
-echo "EnableRemoteCommands=1" >> /usr/local/etc/zabbix_agentd.conf
+echo "Server=127.0.0.1" > $CONF_AGENTE
+echo "StartAgents=3" >> $CONF_AGENTE
+echo "DebugLevel=3" >> $CONF_AGENTE
+echo "Hostname=$(hostname)" >> $CONF_AGENTE
+echo "PidFile=/tmp/zabbix_agentd.pid" >> $CONF_AGENTE
+echo "LogFile=/tmp/zabbix_agentd.log" >> $CONF_AGENTE
+echo "Timeout=3" >> $CONF_AGENTE
+echo "EnableRemoteCommands=1" >> $CONF_AGENTE
+
+echo "O arquivo de configuracao do Zabbix Agentd esta em $CONF_AGENTE"
 

@@ -6,6 +6,8 @@
 # Last updated: 21-jan-2015, 18:08
 # revision:     Andre Deo <andredeo@gmail.com>
 # Last updated: 27-jan-2015, 23:20
+# revision:     Aecio Pires <aecio@dynavideo.com.br>
+# Last updated: 24-fev-2015, 10:00
 #-------------------------------------------------------
 
 CMDLINE=$0
@@ -18,22 +20,21 @@ if [ ! "$MYUID" -eq 0 ] ; then
         exit 1
 fi
 
-
-# Este capítulo utiliza como ambiente o zabbix 2.*
-SOURCE_DIR="/install/zabbix-2*";
-cd $SOURCE_DIR
-
-# Este capítulo utiliza como ambiente o zabbix 2.2.3
+# Este capitulo utiliza como ambiente o zabbix 2.*
+DIR_DB_SQLITE=/var/lib/sqlite/
+DB_SQLITE=$DIR_DB_SQLITE/zabbix.db
 SOURCE_DIR="/install/zabbix-2*";
 cd $SOURCE_DIR
 
 cd database/sqlite3
-# Cria localização do repositorio de dados
-mkdir /var/lib/sqlite/
-sqlite3 /var/lib/sqlite/zabbix.db < schema.sql; 
-sqlite3 /var/lib/sqlite/zabbix.db < images.sql; 
-sqlite3 /var/lib/sqlite/zabbix.db < data.sql;
+# Cria o banco Sqlite a ser usado pelo Zabbix Proxy
+mkdir -p $DIR_DB_SQLITE > /dev/null 2>&1
+sqlite3 $DB_SQLITE < schema.sql; 
+sqlite3 $DB_SQLITE < images.sql; 
+sqlite3 $DB_SQLITE < data.sql;
 
-# Configurando a permissao do arquivo
-useradd zabbix -s /sbin/nologin
-chown -R zabbix:zabbix /var/lib/sqlite/
+# Configurando a permissao de acesso ao banco de dados
+useradd zabbix -s /sbin/nologin > /dev/null 2>&1
+chown -R zabbix:zabbix $DIR_DB_SQLITE
+
+echo "O banco de dados a ser usado pelo Zabbix Proxy esta em $DB_SQLITE ."
