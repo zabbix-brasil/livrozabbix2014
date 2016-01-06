@@ -4,7 +4,7 @@
     <date>2014-10-14T21:07:16Z</date>
     <groups>
         <group>
-            <name>Ativos de Rede</name>
+            <name>Ativos de rede</name>
         </group>
         <group>
             <name>Rede e segurança</name>
@@ -263,7 +263,7 @@
             </templates>
             <groups>
                 <group>
-                    <name>Ativos de Rede</name>
+                    <name>Ativos de rede</name>
                 </group>
             </groups>
             <interfaces>
@@ -373,7 +373,7 @@
             </templates>
             <groups>
                 <group>
-                    <name>Ativos de Rede</name>
+                    <name>Ativos de rede</name>
                 </group>
             </groups>
             <interfaces>
