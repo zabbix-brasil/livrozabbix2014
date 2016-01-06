@@ -4,7 +4,7 @@
     <date>2014-10-14T22:06:12Z</date>
     <groups>
         <group>
-            <name>Ativos de Rede</name>
+            <name>Ativos de rede</name>
         </group>
         <group>
             <name>Zabbix servers</name>
