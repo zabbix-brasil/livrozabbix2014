@@ -4,7 +4,7 @@
     <date>2014-10-15T20:55:31Z</date>
     <groups>
         <group>
-            <name>Ativos de Rede</name>
+            <name>Ativos de rede</name>
         </group>
     </groups>
     <hosts>
@@ -25,7 +25,7 @@
             </templates>
             <groups>
                 <group>
-                    <name>Ativos de Rede</name>
+                    <name>Ativos de rede</name>
                 </group>
             </groups>
             <interfaces>
@@ -135,7 +135,7 @@
             </templates>
             <groups>
                 <group>
-                    <name>Ativos de Rede</name>
+                    <name>Ativos de rede</name>
                 </group>
             </groups>
             <interfaces>
@@ -245,7 +245,7 @@
             </templates>
             <groups>
                 <group>
-                    <name>Ativos de Rede</name>
+                    <name>Ativos de rede</name>
                 </group>
             </groups>
             <interfaces>
@@ -355,7 +355,7 @@
             </templates>
             <groups>
                 <group>
-                    <name>Ativos de Rede</name>
+                    <name>Ativos de rede</name>
                 </group>
             </groups>
             <interfaces>
@@ -465,7 +465,7 @@
             </templates>
             <groups>
                 <group>
-                    <name>Ativos de Rede</name>
+                    <name>Ativos de rede</name>
                 </group>
             </groups>
             <interfaces>
