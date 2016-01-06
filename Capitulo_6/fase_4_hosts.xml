@@ -28,7 +28,7 @@
             </templates>
             <groups>
                 <group>
-                    <name>Ativos de Rede</name>
+                    <name>Ativos de rede</name>
                 </group>
             </groups>
             <interfaces>
@@ -138,7 +138,7 @@
             </templates>
             <groups>
                 <group>
-                    <name>Ativos de Rede</name>
+                    <name>Ativos de rede</name>
                 </group>
             </groups>
             <interfaces>
@@ -248,7 +248,7 @@
             </templates>
             <groups>
                 <group>
-                    <name>Ativos de Rede</name>
+                    <name>Ativos de rede</name>
                 </group>
             </groups>
             <interfaces>
@@ -358,7 +358,7 @@
             </templates>
             <groups>
                 <group>
-                    <name>Ativos de Rede</name>
+                    <name>Ativos de rede</name>
                 </group>
             </groups>
             <interfaces>
@@ -468,7 +468,7 @@
             </templates>
             <groups>
                 <group>
-                    <name>Ativos de Rede</name>
+                    <name>Ativos de rede</name>
                 </group>
             </groups>
             <interfaces>
