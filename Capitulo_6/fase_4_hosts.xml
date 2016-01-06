@@ -561,46 +561,5 @@
                 <poc_2_notes/>
             </inventory>
         </host>
-        <host>
-            <host>Zabbix server</host>
-            <name>Zabbix server</name>
-            <description/>
-            <proxy/>
-            <status>1</status>
-            <ipmi_authtype>-1</ipmi_authtype>
-            <ipmi_privilege>2</ipmi_privilege>
-            <ipmi_username/>
-            <ipmi_password/>
-            <templates>
-                <template>
-                    <name>Template App Zabbix Server</name>
-                </template>
-                <template>
-                    <name>100_Linux</name>
-                </template>
-            </templates>
-            <groups>
-                <group>
-                    <name>Zabbix servers</name>
-                </group>
-            </groups>
-            <interfaces>
-                <interface>
-                    <default>1</default>
-                    <type>1</type>
-                    <useip>1</useip>
-                    <ip>127.0.0.1</ip>
-                    <dns/>
-                    <port>10050</port>
-                    <bulk>1</bulk>
-                    <interface_ref>if1</interface_ref>
-                </interface>
-            </interfaces>
-            <applications/>
-            <items/>
-            <discovery_rules/>
-            <macros/>
-            <inventory/>
-        </host>
     </hosts>
 </zabbix_export>
