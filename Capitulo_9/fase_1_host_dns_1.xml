@@ -4,7 +4,7 @@
     <date>2014-11-04T18:03:53Z</date>
     <groups>
         <group>
-            <name>Ativos de Rede</name>
+            <name>Ativos de rede</name>
         </group>
     </groups>
     <hosts>
@@ -25,7 +25,7 @@
             </templates>
             <groups>
                 <group>
-                    <name>Ativos de Rede</name>
+                    <name>Ativos de rede</name>
                 </group>
             </groups>
             <interfaces>
